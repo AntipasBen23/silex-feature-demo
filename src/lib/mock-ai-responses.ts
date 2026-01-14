@@ -1,5 +1,5 @@
 export interface ComparisonResponse {
-  query: string;
+  queryText: string;
   analysis: string;
   keyDifferences: string[];
   similarities: string[];
@@ -14,7 +14,7 @@ export interface ComparisonResponse {
 export const mockComparisons: Record<string, ComparisonResponse> = {
   // GDPR vs Swiss Data Protection
   'gdpr-swiss-data-protection': {
-    query: 'Compare GDPR with Swiss Federal Data Protection Act',
+    queryText: 'Compare GDPR with Swiss Federal Data Protection Act',
     analysis: `Both the EU General Data Protection Regulation (GDPR) and the Swiss Federal Act on Data Protection (FADP) establish comprehensive frameworks for personal data protection, but with notable differences in scope and enforcement.
 
 **Legal Basis for Processing:**
@@ -66,7 +66,7 @@ GDPR applies extraterritorially to any organization processing EU residents' dat
 
   // Data Breach Notification
   'data-breach-notification': {
-    query: 'What are the data breach notification requirements in EU vs Switzerland?',
+    queryText: 'What are the data breach notification requirements in EU vs Switzerland?',
     analysis: `Data breach notification requirements represent a critical compliance obligation under both EU and Swiss data protection law, though with important procedural distinctions.
 
 **EU GDPR Requirements (Article 33):**
@@ -113,7 +113,7 @@ GDPR requires notification when there is a "risk" to rights and freedoms (with a
 
   // Cross-border Data Transfers
   'cross-border-data-transfer': {
-    query: 'Analyze cross-border data transfer rules: EU-Swiss framework',
+    queryText: 'Analyze cross-border data transfer rules: EU-Swiss framework',
     analysis: `Cross-border data transfers between the EU and Switzerland operate under a complex framework that has evolved significantly following the Schrems II decision and Switzerland's adequacy recognition.
 
 **Switzerland's Adequacy Status:**
@@ -162,7 +162,7 @@ Following CJEU Schrems II (C-311/18), organizations must conduct Transfer Impact
 
   // Contract Formation
   'contract-formation-swiss-french': {
-    query: 'Compare contract formation requirements: Swiss OR vs French Code Civil',
+    queryText: 'Compare contract formation requirements: Swiss OR vs French Code Civil',
     analysis: `Contract formation under Swiss and French law share Romano-Germanic roots but diverge in crucial areas, particularly regarding form requirements and the role of causa.
 
 **Fundamental Requirements:**
@@ -203,7 +203,7 @@ Swiss law follows freedom of form (Article 11 OR) - contracts are valid regardle
 
   // Fallback for unmatched queries
   'default': {
-    query: 'General legal comparison',
+    queryText: 'General legal comparison',
     analysis: `This query requires specific legal research across the selected jurisdictions. The International Bridge feature analyzes legal frameworks by comparing statutory provisions, case law, and regulatory guidance.
 
 For precise comparative analysis, please specify:
