@@ -18,7 +18,7 @@ export interface JurisdictionInfo {
 }
 
 export interface ComparisonResponse {
-  query: string;
+  queryText: string;
   analysis: string;
   keyDifferences: string[];
   similarities: string[];
