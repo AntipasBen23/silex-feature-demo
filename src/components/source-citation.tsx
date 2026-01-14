@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Jurisdiction } from '@/types';
+import type { Jurisdiction } from '@/types';
 import { getJurisdictionBadgeClasses, cn } from '@/lib/utils';
-import { legalSources } from '@/lib/mock-legal-data';
+import { legalSources, jurisdictions } from '@/lib/mock-legal-data';
+import { getSourceUrl } from '@/lib/source-helpers';
 
 interface SourceCitationProps {
   source: {
@@ -18,9 +19,9 @@ export function SourceCitation({ source, index }: SourceCitationProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Find full source details from mock data
-  const fullSource = getLegalSourcesByJurisdiction(source.jurisdiction).find(
-    s => s.reference === source.reference
-  );
+  const fullSource = legalSources
+    .filter(s => s.jurisdiction === source.jurisdiction)
+    .find(s => s.reference === source.reference);
 
   const jurisdictionInfo = {
     CH: { name: 'Switzerland', flag: '🇨🇭' },
