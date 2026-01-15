@@ -34,7 +34,6 @@ export default function Home() {
       
       await simulateProcessingDelay(2500);
 
-      // Fi
       const matchKey = findBestMatch(query);
       const response = getComparisonResponse(matchKey);
 
