@@ -52,7 +52,7 @@ export function QueryInput({ onSearch, isLoading, selectedJurisdictions }: Query
             disabled={isLoading}
           />
 
-          {/* Character Count */}
+          {/* Character Count. */}
           <div className="absolute bottom-3 right-3 text-xs text-slate-400">
             {query.length} / 500
           </div>
