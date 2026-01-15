@@ -38,7 +38,6 @@ export default function Home() {
       const matchKey = findBestMatch(query);
       const response = getComparisonResponse(matchKey);
 
-      // Create result
       const result: ComparisonResult = {
         ...response,
         id: generateId(),
