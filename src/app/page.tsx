@@ -31,10 +31,10 @@ export default function Home() {
     setComparisonResult(null);
 
     try {
-      // Simulate processing delay
+      
       await simulateProcessingDelay(2500);
 
-      // Find best matching response
+      // Fi
       const matchKey = findBestMatch(query);
       const response = getComparisonResponse(matchKey);
 
